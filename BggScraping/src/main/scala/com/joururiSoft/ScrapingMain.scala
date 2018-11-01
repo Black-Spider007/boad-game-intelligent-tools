@@ -1,20 +1,21 @@
 package com.joururiSoft
 
 import com.typesafe.scalalogging.LazyLogging
-import net.ruippeixotog.scalascraper.browser.HtmlUnitBrowser
+import net.ruippeixotog.scalascraper.browser.{HtmlUnitBrowser, JsoupBrowser}
 import net.ruippeixotog.scalascraper.dsl.DSL._
 import net.ruippeixotog.scalascraper.dsl.DSL.Extract._
 import net.ruippeixotog.scalascraper.dsl.DSL.Parse._
 
 object ScrapingMain extends App with LazyLogging {
   val BASE_URL = "https://boardgamegeek.com"
+  val BROWSE_BOADGAME = "/browse/boardgame"
 
   scrapingMain()
 
   def scrapingMain(): Unit = {
-    val htmlUnitBrowser = HtmlUnitBrowser()
+    val jSoupBrowser = JsoupBrowser()
 
-    val doc = htmlUnitBrowser.get(s"$BASE_URL/browse/boardgame")
+    val doc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME")
     val lastPage = (doc >> text("""a[title="last page"]"""))
       .toString
       .replaceAll("\\[|\\]", "")
@@ -23,6 +24,9 @@ object ScrapingMain extends App with LazyLogging {
     val pageNumberList = (1 to lastPage).toList
 
     pageNumberList.foreach { pageNumber =>
+      val listDoc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME/$pageNumber")
+      val urlList = listDoc >?> element("table.collection_table")
+      urlList.foreach(println)
       logger.info(pageNumber.toString)
     }
   }

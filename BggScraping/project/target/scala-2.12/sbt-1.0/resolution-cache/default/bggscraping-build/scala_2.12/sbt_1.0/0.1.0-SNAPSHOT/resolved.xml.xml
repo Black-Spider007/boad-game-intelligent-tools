@@ -4,7 +4,7 @@
 		module="bggscraping-build"
 		revision="0.1.0-SNAPSHOT"
 		status="integration"
-		publication="20181101001806"
+		publication="20181101203212"
 		e:sbtVersion="1.0" e:scalaVersion="2.12"
 	>
 		<description>
