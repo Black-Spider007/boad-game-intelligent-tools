@@ -24,10 +24,18 @@ object ScrapingMain extends App with LazyLogging {
     val pageNumberList = (1 to lastPage).toList
 
     pageNumberList.foreach { pageNumber =>
-      val gameListDoc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME/$pageNumber")
-      val gameTable = gameListDoc >?> element("table.collection_table")
-      
-      logger.info(pageNumber.toString)
+      logger.info(s"URL : $BASE_URL$BROWSE_BOADGAME/page/$pageNumber")
+      val gameListDoc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME/page/$pageNumber")
+      val gameLinkList = gameListDoc >?> elementList("tr#row_ td.collection_objectname a")
+
+      gameLinkList match {
+        case Some(list) =>
+          list.foreach { elem =>
+            val link = elem.attr("href")
+            println(jSoupBrowser.get(s"$BASE_URL$link"))
+          }
+        case None => //
+      }
     }
   }
 }
