@@ -1,4 +1,4 @@
-package com.joururiSoft
+package com.joururisoft
 
 import com.typesafe.scalalogging.LazyLogging
 import net.ruippeixotog.scalascraper.browser.{HtmlUnitBrowser, JsoupBrowser}
