@@ -1,41 +1,37 @@
 package com.joururisoft
 
-import com.typesafe.scalalogging.LazyLogging
-import net.ruippeixotog.scalascraper.browser.{HtmlUnitBrowser, JsoupBrowser}
-import net.ruippeixotog.scalascraper.dsl.DSL._
-import net.ruippeixotog.scalascraper.dsl.DSL.Extract._
-import net.ruippeixotog.scalascraper.dsl.DSL.Parse._
+import java.io.{FileOutputStream, OutputStreamWriter}
+import net.ruippeixotog.scalascraper.model.Element
 
-object ScrapingMain extends App with LazyLogging {
-  val BASE_URL = "https://boardgamegeek.com"
-  val BROWSE_BOADGAME = "/browse/boardgame"
+object ScrapingMain extends GameLinkList {
+  override def processGameLinkList(gameLinkList: Option[List[Element]]): Unit = {
+    gameLinkList match {
+      case Some(list) =>
+        list.foreach { elem =>
+          val link = elem.attr("href")
+          val path = link.split("""/""")
 
-  scrapingMain()
-
-  def scrapingMain(): Unit = {
-    val jSoupBrowser = JsoupBrowser()
-
-    val doc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME")
-    val lastPage = (doc >> text("""a[title="last page"]"""))
-      .toString
-      .replaceAll("\\[|\\]", "")
-      .toInt
-
-    val pageNumberList = (1 to lastPage).toList
-
-    pageNumberList.foreach { pageNumber =>
-      logger.info(s"URL : $BASE_URL$BROWSE_BOADGAME/page/$pageNumber")
-      val gameListDoc = jSoupBrowser.get(s"$BASE_URL$BROWSE_BOADGAME/page/$pageNumber")
-      val gameLinkList = gameListDoc >?> elementList("tr#row_ td.collection_objectname a")
-
-      gameLinkList match {
-        case Some(list) =>
-          list.foreach { elem =>
-            val link = elem.attr("href")
-            println(jSoupBrowser.get(s"$BASE_URL$link"))
+          val (basicOrExtension, gameId, gameTitle) = path.length match {
+            case 4 => (path(1), path(2), path(3))
+            case 3 => (path(1), path(2), "unknownTitle")
+            case _ => ("unknownExtension", "unknownId", "unknownTitle")
           }
-        case None => //
-      }
+
+          logger.info(s"出力対象 URL：$BASE_URL$link")
+          val fileName = s"output-files/${basicOrExtension}_${gameId}_$gameTitle.html"
+          val encode = "UTF-8"
+          val append = true
+
+          // 書き込み処理
+          val fileOutPutStream = new FileOutputStream(fileName, append)
+          val writer = new OutputStreamWriter(fileOutPutStream, encode)
+
+          driver.get(s"$BASE_URL$link")
+          writer.write(driver.getPageSource)
+          writer.close()
+          logger.info(s"出力完了")
+        }
+      case None => //
     }
   }
 }

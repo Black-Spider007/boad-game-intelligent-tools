@@ -11,5 +11,6 @@ libraryDependencies ++= Seq(
   "ch.qos.logback"  %  "logback-classic"   % "1.2.3",
   "com.typesafe.scala-logging" %% "scala-logging" % "3.9.0",
   "com.codeborne" % "phantomjsdriver" % "1.4.4",
-  "org.seleniumhq.selenium" % "selenium-java" % "3.141.59"
+  "org.seleniumhq.selenium" % "selenium-java" % "3.141.59",
+  "org.scala-lang.modules" %% "scala-xml" % "1.1.1"
 )
