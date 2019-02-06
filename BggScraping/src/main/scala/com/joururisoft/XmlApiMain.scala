@@ -20,7 +20,7 @@ object XmlApiMain extends GameLinkList {
             case _ => ("unknownExtension", "unknownId", "unknownTitle")
           }
 
-          if (gameId == "unknownId") {
+          if (gameId != "unknownId") {
             val commentsApiUrl = s"http://www.boardgamegeek.com/xmlapi/boardgame/$gameId?comments=1"
             val statsApiUrl = s"http://www.boardgamegeek.com/xmlapi/boardgame/$gameId?stats=1"
 
