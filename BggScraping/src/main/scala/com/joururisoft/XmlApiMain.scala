@@ -21,17 +21,12 @@ object XmlApiMain extends GameLinkList {
           }
 
           if (gameId != "unknownId") {
-            val commentsApiUrl = s"http://www.boardgamegeek.com/xmlapi/boardgame/$gameId?comments=1"
-            val statsApiUrl = s"http://www.boardgamegeek.com/xmlapi/boardgame/$gameId?stats=1"
+            val statsApiUrl = s"https://www.boardgamegeek.com/xmlapi2/thing?id=$gameId?stats=1"
 
             // 文字列からXMLオブジェクトを作る
-            driver.get(commentsApiUrl)
-            val commentsXml = XML.loadString(driver.getPageSource)
             driver.get(statsApiUrl)
             val statsXml = XML.loadString(driver.getPageSource)
 
-            logger.info(s"コメント API URL：$commentsApiUrl")
-            logger.info(commentsXml.toString)
             logger.info(s"概要 API URL：$statsApiUrl")
             logger.info(statsXml.toString)
 
