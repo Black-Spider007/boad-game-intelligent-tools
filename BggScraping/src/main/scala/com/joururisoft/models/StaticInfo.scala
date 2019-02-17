@@ -3,7 +3,7 @@ package com.joururisoft.models
 import scalikejdbc._
 import java.time.{ZonedDateTime}
 
-case class GameStaticInfo(
+case class StaticInfo(
   id: Int,
   gameId: Int,
   usersRated: Option[Int] = None,
@@ -21,72 +21,72 @@ case class GameStaticInfo(
   insertDate: Option[ZonedDateTime] = None,
   lastUpdate: Option[ZonedDateTime] = None) {
 
-  def save()(implicit session: DBSession = GameStaticInfo.autoSession): GameStaticInfo = GameStaticInfo.save(this)(session)
+  def save()(implicit session: DBSession = StaticInfo.autoSession): StaticInfo = StaticInfo.save(this)(session)
 
-  def destroy()(implicit session: DBSession = GameStaticInfo.autoSession): Int = GameStaticInfo.destroy(this)(session)
+  def destroy()(implicit session: DBSession = StaticInfo.autoSession): Int = StaticInfo.destroy(this)(session)
 
 }
 
 
-object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
+object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
 
-  override val tableName = "game_static_info"
+  override val tableName = "static_info"
 
   override val columns = Seq("id", "game_id", "users_rated", "average_rate", "bayes_average_rate", "std_eviation", "median", "owned", "trading", "wanting", "wishing", "num_of_comments", "num_of_weights", "average_weight", "insert_date", "last_update")
 
-  def apply(gsi: SyntaxProvider[GameStaticInfo])(rs: WrappedResultSet): GameStaticInfo = apply(gsi.resultName)(rs)
-  def apply(gsi: ResultName[GameStaticInfo])(rs: WrappedResultSet): GameStaticInfo = new GameStaticInfo(
-    id = rs.get(gsi.id),
-    gameId = rs.get(gsi.gameId),
-    usersRated = rs.get(gsi.usersRated),
-    averageRate = rs.get(gsi.averageRate),
-    bayesAverageRate = rs.get(gsi.bayesAverageRate),
-    stdEviation = rs.get(gsi.stdEviation),
-    median = rs.get(gsi.median),
-    owned = rs.get(gsi.owned),
-    trading = rs.get(gsi.trading),
-    wanting = rs.get(gsi.wanting),
-    wishing = rs.get(gsi.wishing),
-    numOfComments = rs.get(gsi.numOfComments),
-    numOfWeights = rs.get(gsi.numOfWeights),
-    averageWeight = rs.get(gsi.averageWeight),
-    insertDate = rs.get(gsi.insertDate),
-    lastUpdate = rs.get(gsi.lastUpdate)
+  def apply(si: SyntaxProvider[StaticInfo])(rs: WrappedResultSet): StaticInfo = apply(si.resultName)(rs)
+  def apply(si: ResultName[StaticInfo])(rs: WrappedResultSet): StaticInfo = new StaticInfo(
+    id = rs.get(si.id),
+    gameId = rs.get(si.gameId),
+    usersRated = rs.get(si.usersRated),
+    averageRate = rs.get(si.averageRate),
+    bayesAverageRate = rs.get(si.bayesAverageRate),
+    stdEviation = rs.get(si.stdEviation),
+    median = rs.get(si.median),
+    owned = rs.get(si.owned),
+    trading = rs.get(si.trading),
+    wanting = rs.get(si.wanting),
+    wishing = rs.get(si.wishing),
+    numOfComments = rs.get(si.numOfComments),
+    numOfWeights = rs.get(si.numOfWeights),
+    averageWeight = rs.get(si.averageWeight),
+    insertDate = rs.get(si.insertDate),
+    lastUpdate = rs.get(si.lastUpdate)
   )
 
-  val gsi = GameStaticInfo.syntax("gsi")
+  val si = StaticInfo.syntax("si")
 
   override val autoSession = AutoSession
 
-  def find(id: Int)(implicit session: DBSession = autoSession): Option[GameStaticInfo] = {
+  def find(id: Int)(implicit session: DBSession = autoSession): Option[StaticInfo] = {
     withSQL {
-      select.from(GameStaticInfo as gsi).where.eq(gsi.id, id)
-    }.map(GameStaticInfo(gsi.resultName)).single.apply()
+      select.from(StaticInfo as si).where.eq(si.id, id)
+    }.map(StaticInfo(si.resultName)).single.apply()
   }
 
-  def findAll()(implicit session: DBSession = autoSession): List[GameStaticInfo] = {
-    withSQL(select.from(GameStaticInfo as gsi)).map(GameStaticInfo(gsi.resultName)).list.apply()
+  def findAll()(implicit session: DBSession = autoSession): List[StaticInfo] = {
+    withSQL(select.from(StaticInfo as si)).map(StaticInfo(si.resultName)).list.apply()
   }
 
   def countAll()(implicit session: DBSession = autoSession): Long = {
-    withSQL(select(sqls.count).from(GameStaticInfo as gsi)).map(rs => rs.long(1)).single.apply().get
+    withSQL(select(sqls.count).from(StaticInfo as si)).map(rs => rs.long(1)).single.apply().get
   }
 
-  def findBy(where: SQLSyntax)(implicit session: DBSession = autoSession): Option[GameStaticInfo] = {
+  def findBy(where: SQLSyntax)(implicit session: DBSession = autoSession): Option[StaticInfo] = {
     withSQL {
-      select.from(GameStaticInfo as gsi).where.append(where)
-    }.map(GameStaticInfo(gsi.resultName)).single.apply()
+      select.from(StaticInfo as si).where.append(where)
+    }.map(StaticInfo(si.resultName)).single.apply()
   }
 
-  def findAllBy(where: SQLSyntax)(implicit session: DBSession = autoSession): List[GameStaticInfo] = {
+  def findAllBy(where: SQLSyntax)(implicit session: DBSession = autoSession): List[StaticInfo] = {
     withSQL {
-      select.from(GameStaticInfo as gsi).where.append(where)
-    }.map(GameStaticInfo(gsi.resultName)).list.apply()
+      select.from(StaticInfo as si).where.append(where)
+    }.map(StaticInfo(si.resultName)).list.apply()
   }
 
   def countBy(where: SQLSyntax)(implicit session: DBSession = autoSession): Long = {
     withSQL {
-      select(sqls.count).from(GameStaticInfo as gsi).where.append(where)
+      select(sqls.count).from(StaticInfo as si).where.append(where)
     }.map(_.long(1)).single.apply().get
   }
 
@@ -105,9 +105,9 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
     numOfWeights: Option[Int] = None,
     averageWeight: Option[Double] = None,
     insertDate: Option[ZonedDateTime] = None,
-    lastUpdate: Option[ZonedDateTime] = None)(implicit session: DBSession = autoSession): GameStaticInfo = {
+    lastUpdate: Option[ZonedDateTime] = None)(implicit session: DBSession = autoSession): StaticInfo = {
     val generatedKey = withSQL {
-      insert.into(GameStaticInfo).namedValues(
+      insert.into(StaticInfo).namedValues(
         column.gameId -> gameId,
         column.usersRated -> usersRated,
         column.averageRate -> averageRate,
@@ -126,7 +126,7 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
       )
     }.updateAndReturnGeneratedKey.apply()
 
-    GameStaticInfo(
+    StaticInfo(
       id = generatedKey.toInt,
       gameId = gameId,
       usersRated = usersRated,
@@ -145,7 +145,7 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
       lastUpdate = lastUpdate)
   }
 
-  def batchInsert(entities: collection.Seq[GameStaticInfo])(implicit session: DBSession = autoSession): List[Int] = {
+  def batchInsert(entities: collection.Seq[StaticInfo])(implicit session: DBSession = autoSession): List[Int] = {
     val params: collection.Seq[Seq[(Symbol, Any)]] = entities.map(entity =>
       Seq(
         'gameId -> entity.gameId,
@@ -163,7 +163,7 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
         'averageWeight -> entity.averageWeight,
         'insertDate -> entity.insertDate,
         'lastUpdate -> entity.lastUpdate))
-    SQL("""insert into game_static_info(
+    SQL("""insert into static_info(
       game_id,
       users_rated,
       average_rate,
@@ -198,9 +198,9 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
     )""").batchByName(params: _*).apply[List]()
   }
 
-  def save(entity: GameStaticInfo)(implicit session: DBSession = autoSession): GameStaticInfo = {
+  def save(entity: StaticInfo)(implicit session: DBSession = autoSession): StaticInfo = {
     withSQL {
-      update(GameStaticInfo).set(
+      update(StaticInfo).set(
         column.id -> entity.id,
         column.gameId -> entity.gameId,
         column.usersRated -> entity.usersRated,
@@ -222,8 +222,8 @@ object GameStaticInfo extends SQLSyntaxSupport[GameStaticInfo] {
     entity
   }
 
-  def destroy(entity: GameStaticInfo)(implicit session: DBSession = autoSession): Int = {
-    withSQL { delete.from(GameStaticInfo).where.eq(column.id, entity.id) }.update.apply()
+  def destroy(entity: StaticInfo)(implicit session: DBSession = autoSession): Int = {
+    withSQL { delete.from(StaticInfo).where.eq(column.id, entity.id) }.update.apply()
   }
 
 }
