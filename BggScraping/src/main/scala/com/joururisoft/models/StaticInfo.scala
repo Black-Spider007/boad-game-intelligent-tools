@@ -9,7 +9,7 @@ case class StaticInfo(
   usersRated: Option[Int] = None,
   averageRate: Option[Double] = None,
   bayesAverageRate: Option[Double] = None,
-  stdEviation: Option[Double] = None,
+  stdDeviation: Option[Double] = None,
   median: Option[Int] = None,
   owned: Option[Int] = None,
   trading: Option[Int] = None,
@@ -32,7 +32,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
 
   override val tableName = "static_info"
 
-  override val columns = Seq("id", "game_id", "users_rated", "average_rate", "bayes_average_rate", "std_eviation", "median", "owned", "trading", "wanting", "wishing", "num_of_comments", "num_of_weights", "average_weight", "insert_date", "last_update")
+  override val columns = Seq("id", "game_id", "users_rated", "average_rate", "bayes_average_rate", "std_deviation", "median", "owned", "trading", "wanting", "wishing", "num_of_comments", "num_of_weights", "average_weight", "insert_date", "last_update")
 
   def apply(si: SyntaxProvider[StaticInfo])(rs: WrappedResultSet): StaticInfo = apply(si.resultName)(rs)
   def apply(si: ResultName[StaticInfo])(rs: WrappedResultSet): StaticInfo = new StaticInfo(
@@ -41,7 +41,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
     usersRated = rs.get(si.usersRated),
     averageRate = rs.get(si.averageRate),
     bayesAverageRate = rs.get(si.bayesAverageRate),
-    stdEviation = rs.get(si.stdEviation),
+    stdDeviation = rs.get(si.stdDeviation),
     median = rs.get(si.median),
     owned = rs.get(si.owned),
     trading = rs.get(si.trading),
@@ -95,7 +95,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
     usersRated: Option[Int] = None,
     averageRate: Option[Double] = None,
     bayesAverageRate: Option[Double] = None,
-    stdEviation: Option[Double] = None,
+    stdDeviation: Option[Double] = None,
     median: Option[Int] = None,
     owned: Option[Int] = None,
     trading: Option[Int] = None,
@@ -112,7 +112,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
         column.usersRated -> usersRated,
         column.averageRate -> averageRate,
         column.bayesAverageRate -> bayesAverageRate,
-        column.stdEviation -> stdEviation,
+        column.stdDeviation -> stdDeviation,
         column.median -> median,
         column.owned -> owned,
         column.trading -> trading,
@@ -132,7 +132,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
       usersRated = usersRated,
       averageRate = averageRate,
       bayesAverageRate = bayesAverageRate,
-      stdEviation = stdEviation,
+      stdDeviation = stdDeviation,
       median = median,
       owned = owned,
       trading = trading,
@@ -152,7 +152,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
         'usersRated -> entity.usersRated,
         'averageRate -> entity.averageRate,
         'bayesAverageRate -> entity.bayesAverageRate,
-        'stdEviation -> entity.stdEviation,
+        'stdDeviation -> entity.stdDeviation,
         'median -> entity.median,
         'owned -> entity.owned,
         'trading -> entity.trading,
@@ -168,7 +168,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
       users_rated,
       average_rate,
       bayes_average_rate,
-      std_eviation,
+      std_deviation,
       median,
       owned,
       trading,
@@ -184,7 +184,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
       {usersRated},
       {averageRate},
       {bayesAverageRate},
-      {stdEviation},
+      {stdDeviation},
       {median},
       {owned},
       {trading},
@@ -206,7 +206,7 @@ object StaticInfo extends SQLSyntaxSupport[StaticInfo] {
         column.usersRated -> entity.usersRated,
         column.averageRate -> entity.averageRate,
         column.bayesAverageRate -> entity.bayesAverageRate,
-        column.stdEviation -> entity.stdEviation,
+        column.stdDeviation -> entity.stdDeviation,
         column.median -> entity.median,
         column.owned -> entity.owned,
         column.trading -> entity.trading,

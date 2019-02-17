@@ -1,6 +1,6 @@
 package com.joururisoft.utils
 
-import java.time.LocalDate
+import java.time.{LocalDate, ZonedDateTime}
 import java.time.format.{DateTimeFormatter, DateTimeParseException}
 
 import com.joururisoft.models.BoardGameMst
@@ -82,7 +82,69 @@ object XmlToDB extends LazyLogging {
   }
 
   def insertStaticInfo(statsXml: Node): Unit = {
+    val usersRated = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val bayesAverageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val stdEviation = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
 
+    usersRated: Option[Int] = None,
+    averageRate: Option[Double] = None,
+    bayesAverageRate: Option[Double] = None,
+    stdEviation: Option[Double] = None,
+    median: Option[Int] = None,
+    owned: Option[Int] = None,
+    trading: Option[Int] = None,
+    wanting: Option[Int] = None,
+    wishing: Option[Int] = None,
+    numOfComments: Option[Int] = None,
+    numOfWeights: Option[Int] = None,
+    averageWeight: Option[Double] = None,
+    insertDate: Option[ZonedDateTime] = None,
+    lastUpdate: Option[ZonedDateTime] = None
 
   }
 }
