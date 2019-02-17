@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="BggScraping-build" external.linked.project.path="$MODULE_DIR$/../../project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="_root_.sbt.Keys._, _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scala.xml.{TopScope=&amp;gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/BLACK-SPIDER/.sbt/preloaded|maven|local-preloaded, C:\Users\BLACK-SPIDER\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
+<module external.linked.project.id="BggScraping-build" external.linked.project.path="$MODULE_DIR$/../../project" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" sbt.imports="_root_.sbt.Keys._, _root_.sbt.ScriptedPlugin.autoImport._, _root_.scalikejdbc.mapper.ScalikejdbcPlugin.autoImport._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scalikejdbc.mapper.ScalikejdbcPlugin, _root_.scala.xml.{TopScope=&amp;gt;SUB:DOLLARscope}" sbt.resolvers="https://repo1.maven.org/maven2/|maven|public, file:/C:/Users/BLACK-SPIDER/.sbt/preloaded|maven|local-preloaded, C:\Users\BLACK-SPIDER\.ivy2\cache|ivy|Local cache" type="SBT_MODULE" version="4">
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/../../project/target/idea-classes" />
     <output-test url="file://$MODULE_DIR$/../../project/target/idea-test-classes" />
@@ -14,6 +14,21 @@
     <orderEntry type="module-library">
       <library name="sbt: sbt-and-plugins">
         <CLASSES>
+          <root url="jar://$USER_HOME$/.ivy2/cache/com.google.protobuf/protobuf-java/bundles/protobuf-java-3.6.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/mysql/mysql-connector-java/jars/mysql-connector-java-8.0.15.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-dbcp2/jars/commons-dbcp2-2.5.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.apache.commons/commons-pool2/jars/commons-pool2-2.6.0.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-collection-compat_2.12/bundles/scala-collection-compat_2.12-0.1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scala-lang.modules/scala-parser-combinators_2.12/bundles/scala-parser-combinators_2.12-1.1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scalikejdbc/scalikejdbc-core_2.12/jars/scalikejdbc-core_2.12-3.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation-macro_2.12/jars/scalikejdbc-interpolation-macro_2.12-3.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scalikejdbc/scalikejdbc-interpolation_2.12/jars/scalikejdbc-interpolation_2.12-3.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scalikejdbc/scalikejdbc-mapper-generator-core_2.12/jars/scalikejdbc-mapper-generator-core_2.12-3.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.scalikejdbc/scalikejdbc_2.12/jars/scalikejdbc_2.12-3.3.2.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.25.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/org.slf4j/slf4j-simple/jars/slf4j-simple-1.7.25.jar!/" />
+          <root url="jar://$USER_HOME$/.ivy2/cache/scala_2.12/sbt_1.0/org.scalikejdbc/scalikejdbc-mapper-generator/jars/scalikejdbc-mapper-generator-3.3.2.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/lib/jline.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/lib/scala-compiler.jar!/" />
           <root url="jar://$USER_HOME$/.sbt/boot/scala-2.12.7/lib/scala-library.jar!/" />
@@ -107,6 +122,6 @@
   </component>
   <component name="SbtModule">
     <option name="buildForURI" value="file:/$MODULE_DIR$/../../" />
-    <option name="imports" value="_root_.sbt.Keys._, _root_.sbt.ScriptedPlugin.autoImport._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" />
+    <option name="imports" value="_root_.sbt.Keys._, _root_.sbt.ScriptedPlugin.autoImport._, _root_.scalikejdbc.mapper.ScalikejdbcPlugin.autoImport._, _root_.sbt._, _root_.sbt.plugins.IvyPlugin, _root_.sbt.plugins.JvmPlugin, _root_.sbt.plugins.CorePlugin, _root_.sbt.ScriptedPlugin, _root_.sbt.plugins.SbtPlugin, _root_.sbt.plugins.JUnitXmlReportPlugin, _root_.sbt.plugins.Giter8TemplatePlugin, _root_.scalikejdbc.mapper.ScalikejdbcPlugin, _root_.scala.xml.{TopScope=&gt;SUB:DOLLARscope}" />
   </component>
 </module>

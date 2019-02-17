@@ -1,9 +1,11 @@
-package com.joururisoft
+package com.joururisoft.oldprogram
 
 import java.io.{FileOutputStream, OutputStreamWriter}
+
+import com.joururisoft.{BGAConnection, GameLinkList}
 import net.ruippeixotog.scalascraper.model.Element
 
-object ScrapingMain extends GameLinkList {
+object ScrapingRawHtml extends GameLinkList with BGAConnection {
   override def processGameLinkList(gameLinkList: Option[List[Element]]): Unit = {
     gameLinkList match {
       case Some(list) =>

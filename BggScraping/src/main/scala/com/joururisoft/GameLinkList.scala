@@ -1,6 +1,5 @@
 package com.joururisoft
 
-import java.io.{FileOutputStream, OutputStreamWriter}
 import java.net.SocketTimeoutException
 
 import com.typesafe.scalalogging.LazyLogging
@@ -14,6 +13,8 @@ import org.openqa.selenium.remote.DesiredCapabilities
 trait GameLinkList extends App with LazyLogging {
   val BASE_URL = "https://boardgamegeek.com"
   val BROWSE_BOADGAME = "/browse/boardgame"
+  val userAgent = "Mozilla/5.0 (Windows NT 6.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.41 Safari/535.1"
+  System.setProperty("phantomjs.page.settings.userAgent", userAgent)
 
   val caps = new DesiredCapabilities
   caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, """D:\Program Files\phantomjs-2.1.1-windows\bin\phantomjs""")
