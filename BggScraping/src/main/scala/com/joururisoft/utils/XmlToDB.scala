@@ -1,18 +1,19 @@
 package com.joururisoft.utils
 
-import java.time.{LocalDate, ZonedDateTime}
+import java.time.LocalDate
 import java.time.format.{DateTimeFormatter, DateTimeParseException}
 
-import com.joururisoft.models.BoardGameMst
+import com.joururisoft.models.{BoardGameMst, StaticInfo}
 import com.typesafe.scalalogging.LazyLogging
 
 import scala.xml.Node
+import scalikejdbc._
 
-object XmlToDB extends LazyLogging {
+object XmlToDB extends LazyLogging with CommonUtils {
   def insertGameMst(statsXml: Node): Unit = {
     val gameMstId = (statsXml \\ "item" \ "@id").text.toInt
     if (BoardGameMst.find(gameMstId).isDefined) {
-      logger.info(s"既に存在する ID のためスキップします：$gameMstId")
+      logger.info(s"BoardGameMst に既に存在する ID のためスキップします：$gameMstId")
       return
     }
 
@@ -77,74 +78,87 @@ object XmlToDB extends LazyLogging {
       playingTime = playingTime,
       minPlayTime = minPlayTime,
       maxPlayTime = maxPlayTime,
-      minAge = minAge
+      minAge = minAge,
+      insertDate = Some(createZonedNow()),
+      lastUpdate = Some(createZonedNow())
     )
   }
 
   def insertStaticInfo(statsXml: Node): Unit = {
-    val usersRated = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val bayesAverageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val stdEviation = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
-    }
-    val averageRate = (statsXml \\ "usersrated" \ "@value").text match {
-      case "" => None
-      case x => Some(x.toInt)
+    val gameMstId = (statsXml \\ "item" \ "@id").text.toInt
+    val where = sqls"game_id = $gameMstId"
+    if (StaticInfo.findBy(where).isDefined) {
+      logger.info(s"StaticInfo に既に存在するゲーム ID のためスキップします：$gameMstId")
+      return
     }
 
-    usersRated: Option[Int] = None,
-    averageRate: Option[Double] = None,
-    bayesAverageRate: Option[Double] = None,
-    stdEviation: Option[Double] = None,
-    median: Option[Int] = None,
-    owned: Option[Int] = None,
-    trading: Option[Int] = None,
-    wanting: Option[Int] = None,
-    wishing: Option[Int] = None,
-    numOfComments: Option[Int] = None,
-    numOfWeights: Option[Int] = None,
-    averageWeight: Option[Double] = None,
-    insertDate: Option[ZonedDateTime] = None,
-    lastUpdate: Option[ZonedDateTime] = None
+    val staticInfoNode = statsXml \\ "statistics"
 
+    val usersRated = (staticInfoNode \\ "usersrated" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageRate = (staticInfoNode \\ "average" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toDouble)
+    }
+    val bayesAverageRate = (staticInfoNode \\ "bayesaverage" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toDouble)
+    }
+    val stdDeviation = (staticInfoNode \\ "stddev" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toDouble)
+    }
+    val median = (staticInfoNode \\ "median" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val owned = (staticInfoNode \\ "owned" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val trading = (staticInfoNode \\ "trading" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val wanting = (staticInfoNode \\ "wanting" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val wishing = (staticInfoNode \\ "wishing" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val numOfComments = (staticInfoNode \\ "numcomments" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val numOfWeights = (staticInfoNode \\ "numweights" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toInt)
+    }
+    val averageWeight = (staticInfoNode \\ "averageweight" \ "@value").text match {
+      case "" => None
+      case x => Some(x.toDouble)
+    }
+
+    StaticInfo.create(
+      gameId = gameMstId,
+      usersRated = usersRated,
+      averageRate = averageRate,
+      bayesAverageRate = bayesAverageRate,
+      stdDeviation = stdDeviation,
+      median = median,
+      owned = owned,
+      trading = trading,
+      wanting = wanting,
+      wishing = wishing,
+      numOfComments = numOfComments,
+      numOfWeights = numOfWeights,
+      averageWeight = averageWeight,
+      insertDate = Some(createZonedNow()),
+      lastUpdate = Some(createZonedNow())
+    )
   }
 }

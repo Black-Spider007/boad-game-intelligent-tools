@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6098f75b-58ab-43f3-9877-c0e97e60d8f8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/models/StaticInfo.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -23,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="137" column="31" lean-forward="true" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
+            <state relative-caret-position="257">
+              <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
               <folding>
                 <element signature="e#31#74#0" expanded="true" />
               </folding>
@@ -38,17 +39,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/BoardGameMst.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="361">
+              <caret line="20" column="42" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="20" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/StaticInfo.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="11" column="14" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="14" />
+            <state relative-caret-position="-380">
+              <caret line="53" column="38" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="53" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -80,11 +81,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="133">
+              <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
               <folding>
-                <element signature="e#25#77#0" expanded="true" />
+                <element signature="e#25#61#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -156,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGAConnection.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/InsertXmlMst.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala" />
       </list>
     </option>
@@ -274,7 +285,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550395087107" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550414271195" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -386,7 +397,7 @@
     <frame x="54" y="-8" width="1874" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2717751" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2717751" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -395,7 +406,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924527" />
-      <window_info anchor="bottom" x="84" y="421" width="1814" height="357" id="Run" order="2" visible="true" weight="0.32924527" />
+      <window_info active="true" anchor="bottom" x="84" y="421" width="1814" height="357" id="Run" order="2" visible="true" weight="0.32924527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -546,16 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/InsertXmlMst.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="e#25#61#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/GameLinkList.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
@@ -600,26 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding>
-            <element signature="e#25#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="137" column="31" lean-forward="true" selection-start-line="137" selection-start-column="31" selection-end-line="137" selection-end-column="31" />
-          <folding>
-            <element signature="e#31#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/joururisoft/models/StaticInfoSpec.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -627,17 +608,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/BoardGameMst.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/StaticInfo.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        <state relative-caret-position="-380">
+          <caret line="53" column="38" lean-forward="true" selection-start-line="39" selection-start-column="4" selection-end-line="53" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/StaticInfo.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="14" />
+        <state relative-caret-position="171">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/InsertXmlMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#25#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="7" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#25#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/BoardGameMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="20" column="42" lean-forward="true" selection-start-line="19" selection-start-column="2" selection-end-line="20" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="94" column="25" lean-forward="true" selection-start-line="94" selection-start-column="25" selection-end-line="94" selection-end-column="25" />
+          <folding>
+            <element signature="e#31#74#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

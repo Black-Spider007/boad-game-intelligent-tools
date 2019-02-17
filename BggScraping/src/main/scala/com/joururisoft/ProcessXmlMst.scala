@@ -1,6 +1,6 @@
 package com.joururisoft
 
-import com.joururisoft.models.{BoardGameMst, XmlMst}
+import com.joururisoft.models.XmlMst
 import com.joururisoft.utils.XmlToDB
 
 import scala.xml.XML
@@ -13,7 +13,8 @@ object ProcessXmlMst extends BGAConnection {
 
     xmlMstList.foreach { xmlMstRecord =>
       val xmlMst = XML.loadString(xmlMstRecord.xmlMst.getOrElse(""))
-      XmlToDB.insertGameMst(xmlMst)
+//      XmlToDB.insertGameMst(xmlMst)
+      XmlToDB.insertStaticInfo(xmlMst)
     }
   }
 }
