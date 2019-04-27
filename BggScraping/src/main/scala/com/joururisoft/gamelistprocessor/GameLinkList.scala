@@ -1,14 +1,15 @@
-package com.joururisoft
+package com.joururisoft.gamelistprocessor
 
 import java.net.SocketTimeoutException
 
 import com.typesafe.scalalogging.LazyLogging
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
-import net.ruippeixotog.scalascraper.scraper.ContentExtractors.{elementList, text}
-import net.ruippeixotog.scalascraper.dsl.DSL._
 import net.ruippeixotog.scalascraper.model.Element
+import net.ruippeixotog.scalascraper.scraper.ContentExtractors.{elementList, text}
 import org.openqa.selenium.phantomjs.{PhantomJSDriver, PhantomJSDriverService}
 import org.openqa.selenium.remote.DesiredCapabilities
+
+import net.ruippeixotog.scalascraper.dsl.DSL._
 
 trait GameLinkList extends App with LazyLogging {
   val BASE_URL = "https://boardgamegeek.com"

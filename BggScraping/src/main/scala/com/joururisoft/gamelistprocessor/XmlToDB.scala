@@ -1,9 +1,10 @@
-package com.joururisoft.utils
+package com.joururisoft.gamelistprocessor
 
 import java.time.LocalDate
 import java.time.format.{DateTimeFormatter, DateTimeParseException}
 
 import com.joururisoft.models.{BoardGameMst, StaticInfo}
+import com.joururisoft.utils.CommonUtils
 import com.typesafe.scalalogging.LazyLogging
 
 import scala.xml.Node

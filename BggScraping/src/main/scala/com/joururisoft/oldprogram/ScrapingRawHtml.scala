@@ -2,7 +2,8 @@ package com.joururisoft.oldprogram
 
 import java.io.{FileOutputStream, OutputStreamWriter}
 
-import com.joururisoft.{BGAConnection, GameLinkList}
+import com.joururisoft.BGAConnection
+import com.joururisoft.gamelistprocessor.GameLinkList
 import net.ruippeixotog.scalascraper.model.Element
 
 object ScrapingRawHtml extends GameLinkList with BGAConnection {

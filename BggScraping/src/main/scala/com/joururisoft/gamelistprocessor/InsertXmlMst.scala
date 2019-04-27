@@ -1,5 +1,6 @@
-package com.joururisoft
+package com.joururisoft.gamelistprocessor
 
+import com.joururisoft.BGAConnection
 import com.joururisoft.models.XmlMst
 import net.ruippeixotog.scalascraper.model.Element
 
@@ -35,7 +36,8 @@ object InsertXmlMst extends GameLinkList with BGAConnection {
     driver.get(statsApiUrl)
     val statsXml = XML.loadString(driver.getPageSource)
     if ((statsXml \\ "item" \ "@id").text.isEmpty) {
-      Thread.sleep(2345)
+      // 読み込み失敗することがあるので5秒後に再リクエスト
+      Thread.sleep(5432)
       insertGameMstAndStaticInfoXml(gameId)
     } else {
       insertXmlMst(statsXml)
