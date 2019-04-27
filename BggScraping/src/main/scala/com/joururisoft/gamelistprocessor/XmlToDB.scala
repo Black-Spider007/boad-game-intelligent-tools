@@ -3,6 +3,7 @@ package com.joururisoft.gamelistprocessor
 import java.time.LocalDate
 import java.time.format.{DateTimeFormatter, DateTimeParseException}
 
+import com.joururisoft.BGAConnection
 import com.joururisoft.models.{BoardGameMst, StaticInfo}
 import com.joururisoft.utils.CommonUtils
 import com.typesafe.scalalogging.LazyLogging
@@ -10,7 +11,7 @@ import com.typesafe.scalalogging.LazyLogging
 import scala.xml.Node
 import scalikejdbc._
 
-object XmlToDB extends LazyLogging with CommonUtils {
+object XmlToDB extends LazyLogging with CommonUtils with BGAConnection {
   def insertGameMst(statsXml: Node): Unit = {
     val gameMstId = (statsXml \\ "item" \ "@id").text.toInt
     if (BoardGameMst.find(gameMstId).isDefined) {

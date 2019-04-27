@@ -168,4 +168,8 @@ object GameCategoryMst extends SQLSyntaxSupport[GameCategoryMst] {
     withSQL { delete.from(GameCategoryMst).where.eq(column.id, entity.id) }.update.apply()
   }
 
+  def truncate(implicit session: DBSession = autoSession): Unit = {
+    sql"TRUNCATE TABLE game_category_mst;".execute.apply()
+  }
+
 }
