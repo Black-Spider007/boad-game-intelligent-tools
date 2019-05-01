@@ -4,7 +4,7 @@ import java.time.LocalDate
 import java.time.format.{DateTimeFormatter, DateTimeParseException}
 
 import com.joururisoft.BGAConnection
-import com.joururisoft.models.{BoardGameMst, StaticInfo}
+import com.joururisoft.models.{BoardGameMst, CategoryRelation, MechanicsRelation, StaticInfo}
 import com.joururisoft.utils.CommonUtils
 import com.typesafe.scalalogging.LazyLogging
 
@@ -162,5 +162,41 @@ object XmlToDB extends LazyLogging with CommonUtils with BGAConnection {
       insertDate = Some(createZonedNow()),
       lastUpdate = Some(createZonedNow())
     )
+  }
+
+  def insertMechanicsRelation(statsXml: Node): Unit = {
+    val gameMstId = (statsXml \\ "item" \ "@id").text.toInt
+    val mechanicsIdSeq = (statsXml \\ "link").theSeq
+        .filter(node => (node \\ "@type").text == "boardgamemechanic")
+        .map(node => (node \\ "@id").text.toInt)
+
+    val now = createZonedNow()
+
+    mechanicsIdSeq.foreach { mechanicsId =>
+      MechanicsRelation.create(
+        gameId = gameMstId,
+        mechanicsId = mechanicsId,
+        insertDate = Some(now),
+        lastUpdate = Some(now)
+      )
+    }
+  }
+
+  def insertCategoryRelation(statsXml: Node): Unit = {
+    val gameMstId = (statsXml \\ "item" \ "@id").text.toInt
+    val categoryIdSeq = (statsXml \\ "link").theSeq
+      .filter(node => (node \\ "@type").text == "boardgamecategory")
+      .map(node => (node \\ "@id").text.toInt)
+
+    val now = createZonedNow()
+
+    categoryIdSeq.foreach { categoryId =>
+      CategoryRelation.create(
+        gameId = gameMstId,
+        categoryId = categoryId,
+        insertDate = Some(now),
+        lastUpdate = Some(now)
+      )
+    }
   }
 }

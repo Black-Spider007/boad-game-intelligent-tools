@@ -5,7 +5,7 @@ import com.joururisoft.models.XmlMst
 
 import scala.xml.XML
 
-object ProcessXmlMst extends BGAConnection {
+object ProcessXmlMst extends App with BGAConnection {
   run()
 
   def run(): Unit = {
@@ -15,6 +15,8 @@ object ProcessXmlMst extends BGAConnection {
       val xmlMst = XML.loadString(xmlMstRecord.xmlMst.getOrElse(""))
       XmlToDB.insertGameMst(xmlMst)
       XmlToDB.insertStaticInfo(xmlMst)
+      XmlToDB.insertMechanicsRelation(xmlMst)
+      XmlToDB.insertCategoryRelation(xmlMst)
     }
   }
 }
