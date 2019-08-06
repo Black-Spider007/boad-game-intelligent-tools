@@ -14,7 +14,7 @@ import net.ruippeixotog.scalascraper.dsl.DSL._
 trait GameLinkList extends App with LazyLogging with BGGScrapingHeader {
   val BROWSE_BOADGAME = "/browse/boardgame"
   val caps = new DesiredCapabilities
-  caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, """D:\Program Files\phantomjs-2.1.1-windows\bin\phantomjs""")
+  caps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, System.getenv("PHANTOMJS_HOME") + "/phantomjs")
   val driver = new PhantomJSDriver(caps)
 
   try {

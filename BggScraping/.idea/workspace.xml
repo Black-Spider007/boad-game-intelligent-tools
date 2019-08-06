@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6098f75b-58ab-43f3-9877-c0e97e60d8f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules/BggScraping.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/BggScraping.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,8 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -47,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/InsertXmlMst.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+            <state relative-caret-position="360">
+              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
               <folding>
                 <element signature="e#43#79#0" expanded="true" />
               </folding>
@@ -59,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="13" column="47" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="47" />
+            <state relative-caret-position="-149">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#43#81#0" expanded="true" />
               </folding>
@@ -69,31 +69,16 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/oldprogram/ScrapingRawHtml.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="e#43#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="974">
-              <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
-              <folding>
-                <element signature="e#43#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="76">
+              <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/CategoryRelation.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/XmlMst.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
@@ -102,10 +87,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/MechanicsRelation.scala">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1311">
-              <caret line="70" column="6" selection-start-line="70" selection-start-column="6" selection-end-line="70" selection-end-column="6" />
+            <state relative-caret-position="3230">
+              <caret line="170" column="48" lean-forward="true" selection-start-line="170" selection-start-column="48" selection-end-line="170" selection-end-column="48" />
+              <folding>
+                <element signature="e#43#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding>
+                <element signature="e#43#79#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,29 +113,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/GameGenre.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+            <state relative-caret-position="190">
+              <caret line="22" column="82" lean-forward="true" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
               <folding>
                 <element signature="e#40#97#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/InsertGameCategories.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="2" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/InsertGameMechanics.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="25" column="73" selection-start-line="25" selection-start-column="73" selection-end-line="25" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -145,6 +127,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
               <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -164,6 +155,7 @@
       <find>Option(</find>
       <find>BROWSE_BOADGAME</find>
       <find>category</find>
+      <find>GameLinkList</find>
     </findStrings>
     <replaceStrings>
       <replace>CATEGORIES_JP</replace>
@@ -201,8 +193,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/InsertXmlMst.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/InsertXmlMst.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGAConnection.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/GameGenre.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/InsertGameCategories.scala" />
@@ -211,11 +201,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/models/GameMechanicMst.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="54" />
+    <option name="x" value="-247" />
     <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -230,6 +222,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -324,12 +318,40 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="BggScraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="BggScraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="BggScraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BggScraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BggScraping" type="b2602c69:ProjectViewProjectNode" />
+              <item name="外部ライブラリー" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -361,7 +383,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProcessXmlMst">
+  <component name="RunManager" selected="Application.InsertXmlMst">
     <configuration name="GetHtmlPage" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.joururisoft.oldprogram.ScrapingRawHtml" />
       <module name="BggScraping" />
@@ -463,7 +485,7 @@
     <frame x="54" y="-8" width="1874" height="1216" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28445426" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30099228" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -472,7 +494,7 @@
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924527" />
-      <window_info anchor="bottom" x="84" y="421" width="1814" height="357" id="Run" order="2" weight="0.32924527" />
+      <window_info active="true" anchor="bottom" x="84" y="421" width="1814" height="357" id="Run" order="2" visible="true" weight="0.32924527" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990566" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -506,17 +528,10 @@
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/GameGenre.scala</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/joururisoft/Main.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/joururisoft/PhantomjsExample.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/Main.scala" />
     <entry file="jar://B:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/Object.java">
@@ -597,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.sbt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/scalikejdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -617,13 +625,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/joururisoft/models/BoardGameMstSpec.scala" />
     <entry file="file://$PROJECT_DIR$/src/test/scala/com/joururisoft/models/GameFamilyMstSpec.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/GameStaticInfo.scala" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/XmlMst.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/plugins.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -646,13 +647,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/oldprogram/ScrapingRawHtml.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/InsertXmlMst.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/ProcessXmlMst.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/XmlToDB.scala" />
@@ -668,20 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -710,36 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/InsertXmlMst.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding>
-            <element signature="e#43#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="47" />
-          <folding>
-            <element signature="e#43#81#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="16" column="38" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding>
-            <element signature="e#43#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/CategoryRelation.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -754,13 +704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/GameGenre.scala">
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
-          <folding>
-            <element signature="e#40#97#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="247">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -778,6 +725,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/utils/CommonUtils.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/oldprogram/ScrapingRawHtml.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/genreprocessor/GameGenre.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="22" column="82" lean-forward="true" selection-start-line="22" selection-start-column="82" selection-end-line="22" selection-end-column="82" />
+          <folding>
+            <element signature="e#40#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/InsertXmlMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
+          <folding>
+            <element signature="e#43#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/BGAConnection.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -785,13 +766,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://B:/Program Files/Java/jdk1.8.0_31/src.zip!/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="887" column="25" selection-start-line="887" selection-start-column="25" selection-end-line="887" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/ProcessXmlMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#43#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/XmlToDB.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="974">
-          <caret line="190" column="30" selection-start-line="190" selection-start-column="30" selection-end-line="190" selection-end-column="30" />
+        <state relative-caret-position="3230">
+          <caret line="170" column="48" lean-forward="true" selection-start-line="170" selection-start-column="48" selection-end-line="170" selection-end-column="48" />
           <folding>
             <element signature="e#43#69#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/models/XmlMst.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/gamelistprocessor/GameLinkList.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-149">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#43#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/joururisoft/BGGScrapingHeader.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="63" selection-start-line="4" selection-start-column="63" selection-end-line="4" selection-end-column="63" />
         </state>
       </provider>
     </entry>
